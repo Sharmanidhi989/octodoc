@@ -60,3 +60,5 @@ gem 'devise'
 gem 'devise-jwt', '~> 0.5.9'
 
 gem 'rack-cors'
+
+gem 'dry-configurable', '0.9.0'
