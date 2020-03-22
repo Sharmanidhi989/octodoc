@@ -11,5 +11,9 @@ Rails.application.routes.draw do
                registrations: 'registrations'
              }
   get 'home/index'
+  resources :appointments, only: %i[create index] do
+    get :fetch_doctors, on: :collection
+    get :fetch_patients, on: :collection
+  end
   root to: "home#index"
 end
